@@ -22,6 +22,7 @@ class NumberSequenceTest {
     void testCreateRandom() {
         NumberSequence ns = new NumberSequence(4,2,4);
 
+        System.out.println(ns.numbers);
         assertEquals(4, ns.numbers.size());
     }
 

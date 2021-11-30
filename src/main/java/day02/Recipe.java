@@ -23,9 +23,7 @@ public class Recipe {
 
     public void addIngredient(String ingredient, String... ingredients) {
         this.ingredients.add(ingredient);
-        if(ingredients.length>0) {
-            this.ingredients.addAll(Arrays.asList(ingredients));
-        }
+        this.ingredients.addAll(Arrays.asList(ingredients));
     }
 
     public String getName() {

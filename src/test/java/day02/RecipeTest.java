@@ -2,6 +2,9 @@ package day02;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RecipeTest {
@@ -39,12 +42,14 @@ class RecipeTest {
     @Test
     void addIngredientMoreIngredients() {
         Recipe recipe = new Recipe("recept3", "leírás");
-        
+
         recipe.addIngredient("hozzávaló1", "hozzávaló2", "hozzávaló3");
 
         assertEquals(3, recipe.getIngredients().size());
         assertEquals("hozzávaló1", recipe.getIngredients().get(0));
         assertEquals("hozzávaló2", recipe.getIngredients().get(1));
         assertEquals("hozzávaló3", recipe.getIngredients().get(2));
+        assertArrayEquals(new String[]{"hozzávaló1", "hozzávaló2", "hozzávaló3"}, recipe.getIngredients().toArray());
+        assertEquals(List.of("hozzávaló1", "hozzávaló2", "hozzávaló3"), recipe.getIngredients());
     }
 }

@@ -8,16 +8,17 @@ class RecipeTest {
 
 
     @Test
-    void testCreateFromName() {
+    void testCreateByName() {
         Recipe recipe = new Recipe("recept");
 
         assertEquals("recept", recipe.getName());
         assertEquals(0, recipe.getIngredients().size());
         assertEquals(null, recipe.getDescription());
+        assertNull(recipe.getDescription());
     }
 
     @Test
-    void testCreateNameAndDesription() {
+    void testCreateByNameAndDescription() {
         Recipe recipe = new Recipe("recept2", "leírás");
 
 
@@ -27,7 +28,7 @@ class RecipeTest {
     }
 
     @Test
-    void addIngredientTestOne() {
+    void addIngredientOneIngredient() {
         Recipe recipe = new Recipe("recept3", "leírás");
         recipe.addIngredient("hozzávaló1");
 
@@ -36,7 +37,7 @@ class RecipeTest {
     }
 
     @Test
-    void addIngredientTestMore() {
+    void addIngredientMoreIngredients() {
         Recipe recipe = new Recipe("recept3", "leírás");
         recipe.addIngredient("hozzávaló1", "hozzávaló2", "hozzávaló3");
 

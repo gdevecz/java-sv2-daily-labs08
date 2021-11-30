@@ -39,6 +39,7 @@ class RecipeTest {
     @Test
     void addIngredientMoreIngredients() {
         Recipe recipe = new Recipe("recept3", "leírás");
+        
         recipe.addIngredient("hozzávaló1", "hozzávaló2", "hozzávaló3");
 
         assertEquals(3, recipe.getIngredients().size());

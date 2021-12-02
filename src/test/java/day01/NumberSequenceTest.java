@@ -11,7 +11,7 @@ class NumberSequenceTest {
     @Test
     void testCreateList() {
         NumberSequence ns = new NumberSequence(Arrays.asList(3, 5, 6));
-        
+
         assertEquals(3,ns.numbers.size());
         assertEquals(3,ns.numbers.get(0));
         assertEquals(5,ns.numbers.get(1));

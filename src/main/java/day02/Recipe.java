@@ -14,7 +14,7 @@ public class Recipe {
 
     public Recipe(String name) {
         this.name = name;
-    }
+}
 
     public Recipe(String name, String description) {
         this(name);
